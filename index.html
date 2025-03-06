@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css">
+
+
+    <title>LinkedIn Text Formatter</title>
+ 
   </head>
   <body>
     <nav>
@@ -19,22 +27,28 @@
         ></textarea>
       </div>
 
-      <div>
-        <p>Bold Text</p>
-        <textarea name="" id="BoldText" readonly></textarea>
+      <div class="container">
+        <div>
+          <p>Bold Text</p>
+          <textarea name="" id="BoldText" readonly></textarea>
+        </div>
+
+        <div>
+          <p>Italic</p>
+          <textarea name="" id="ItalicText" readonly></textarea>
+        </div>
+        <div>
+          <p>Script</p>
+          <textarea name="" id="scriptText" readonly></textarea>
+        </div>
+        <div>
+          <p>Bold Script</p>
+          <textarea name="" id="boldScript" readonly></textarea>
+        </div>
       </div>
 
-      <button>Click here</button>
     </section>
   </body>
-
-  <script>
-    function formatText() {
-      let getText = document.getElementById("GetLinkedInText").value;
-      let bold = document.getElementById("BoldText");
-
-      bold.value = `${getText}`;
-      bold = bold.style.fontWeight = "bolder";
-    }
-  </script>
+<script src="index.js"></script>
+ 
 </html>
