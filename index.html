@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <h1>LinkedIn Text Formatter</h1>
+    </nav>
+    <section>
+      <div>
+        <p>Format your LinkedIn Text here</p>
+        <textarea
+          name=""
+          id="GetLinkedInText"
+          oninput="formatText()"
+        ></textarea>
+      </div>
+
+      <div>
+        <p>Bold Text</p>
+        <textarea name="" id="BoldText" readonly></textarea>
+      </div>
+
+      <button>Click here</button>
+    </section>
+  </body>
+
+  <script>
+    function formatText() {
+      let getText = document.getElementById("GetLinkedInText").value;
+      let bold = document.getElementById("BoldText");
+
+      bold.value = `${getText}`;
+      bold = bold.style.fontWeight = "bolder";
+    }
+  </script>
+</html>
